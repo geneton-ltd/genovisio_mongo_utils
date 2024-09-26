@@ -1,16 +1,16 @@
 # genovisio_mongo_utils
 
-Utils when working with mongo database
+Utils when working with mongo database in Genovisio.
 
 ## Usage
 
 Install like any other pip package from git:
 
 ```sh
-pip install git+https://github.com/cuspuk/genovisio_utils.git@{TAG}
+pip install git+https://github.com/cuspuk/genovisio_mongo_utils.git@{TAG}
 ```
 
-or add it similarly as pip dependency in conda.
+or add it similarly as pip dependency in conda. TAG represents the release version, for example `v0.1.0`
 
 Then, use it as any other python library in python scripts:
 
