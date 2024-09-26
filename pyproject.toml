@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "genovisio_utils"
+version = "0.1.0"
+description = "Genovisio utils"
+authors = ["Marcel Kucharik <marcel.kucharik@geneton.sk>", "Michaela Gaziova <michaela.gaziova@geneton.sk>", "Jozef Sitarcik <jozef.sitarcik@geneton.sk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+pymongo = "==4.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
