@@ -6,7 +6,7 @@ authors = ["Marcel Kucharik <marcel.kucharik@geneton.sk>", "Michaela Gaziova <mi
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.12"
+python = ">=3.11.9"
 pymongo = "==4.8"
 
 [build-system]
