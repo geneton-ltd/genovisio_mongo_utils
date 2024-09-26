@@ -1,4 +1,4 @@
-name: Test ISV package
+name: Test mongo_utils package
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          poetry install --no-root
+          poetry install
 
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.11.0
