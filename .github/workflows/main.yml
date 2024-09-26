@@ -1,0 +1,41 @@
+name: Test ISV package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "poetry config virtualenvs.create false" >> ~/.bashrc
+          source ~/.bashrc
+          poetry --version
+
+      - name: Install dependencies
+        run: |
+          poetry install --no-root
+
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.11.0
+        with:
+          mongodb-version: 6.0.16
+          mongodb-port: 27017
+
+      - name: Run tests
+        run: |
+          poetry run python tests/test_insert_into_mongodb.py --mongo_uri "mongodb://localhost:27017/"
