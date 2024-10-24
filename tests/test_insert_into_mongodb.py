@@ -23,7 +23,7 @@ def test_insert_into_mongodb(
         data_generator=data_generator,
     )
 
-    # use raise instead of assert to skip pytest dependency
+    # using raise instead of assert to skip pytest dependency
     if nums != 10:
         raise ValueError(f"Expected 10, got {nums}")
 
